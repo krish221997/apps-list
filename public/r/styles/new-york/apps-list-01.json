@@ -1,0 +1,19 @@
+{
+  "name": "apps-list-01",
+  "type": "registry:block",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "card",
+    "input"
+  ],
+  "files": [
+    {
+      "path": "block/apps-list-01.tsx",
+      "content": "import { Card } from \"@/components/ui/card\";\nimport { Input } from \"@/components/ui/input\";\nimport { Search } from \"lucide-react\";\n\nexport default function AppsList () {\n\n  const apps = [\n    {\n      name: \"Shopify\",\n      icon: \"https://assets.buildable.dev/catalog/node-templates/shopify.svg\",\n    },\n    {\n      name: \"Stripe\",\n      icon: \"https://assets.buildable.dev/catalog/node-templates/stripe.svg\",\n    },\n    {\n      name: \"BigQuery\",\n      icon: \"https://assets.buildable.dev/catalog/node-templates/bigquery.svg\",\n    },\n    {\n      name: \"Salesforce\",\n      icon: \"https://assets.buildable.dev/catalog/node-templates/salesforce.svg\",\n    },\n    {\n      name: \"HubSpot\",\n      icon: \"https://assets.buildable.dev/catalog/node-templates/hubspot.svg\",\n    },\n    {\n      name: \"PostgreSQL\",\n      icon: \"https://assets.buildable.dev/catalog/node-templates/postgresql.svg\",\n    },\n    {\n      name: \"Zendesk\",\n      icon: \"https://assets.buildable.dev/catalog/node-templates/zendesk.svg\",\n    },\n    {\n      name: \"Slack\",\n      icon: \"https://assets.buildable.dev/catalog/node-templates/slack.svg\",\n    },\n    {\n      name: \"Gmail\",\n      icon: \"https://assets.buildable.dev/catalog/node-templates/gmail.svg\",\n    },\n  ];\n\n  return (\n    <div className=\"space-y-4\">\n      <div className=\"relative\">\n        <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground\" />\n        <Input className=\"pl-10\" placeholder=\"Search for more connections...\" />\n      </div>\n      <div className=\"grid grid-cols-2 sm:grid-cols-3 gap-4\">\n        {apps.map((app) => (\n          <Card\n            key={app.name}\n            className=\"p-4 flex flex-col items-center justify-center cursor-pointer hover:bg-muted transition-colors\"\n          >\n            <img src={app.icon} alt={app.name} className=\"w-12 h-12 mb-2\" />\n            <p className=\"text-sm font-medium\">{app.name}</p>\n          </Card>\n        ))}\n      </div>\n    </div>\n  );\n};\n",
+      "type": "registry:block",
+      "target": ""
+    }
+  ]
+}

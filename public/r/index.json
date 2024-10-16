@@ -41,5 +41,25 @@
         }
       }
     }
+  },
+  {
+    "name": "input",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/input.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "card",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/card.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

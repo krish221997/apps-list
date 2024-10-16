@@ -29,4 +29,14 @@ export const ui: Registry = [
       },
     },
   },
+  {
+    name: "input",
+    type: "registry:ui",
+    files: ["ui/input.tsx"],
+  },
+  {
+    name: "card",
+    type: "registry:ui",
+    files: ["ui/card.tsx"],
+  },
 ];

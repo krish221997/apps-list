@@ -16,6 +16,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "input": {
+      name: "input",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/new-york/ui/input.tsx"],
+      component: React.lazy(() => import("@/registry/new-york/ui/input.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "card": {
+      name: "card",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/new-york/ui/card.tsx"],
+      component: React.lazy(() => import("@/registry/new-york/ui/card.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       type: "registry:example",
@@ -45,6 +67,17 @@ export const Index: Record<string, any> = {
       files: ["registry/new-york/block/authentication-01.tsx"],
       component: React.lazy(() => import("@/registry/new-york/block/authentication-01.tsx")),
       source: "__registry__/new-york/block/authentication-01.tsx",
+      category: "Authentication",
+      subcategory: "Login",
+      chunks: []
+    },
+    "apps-list-01": {
+      name: "apps-list-01",
+      type: "registry:block",
+      registryDependencies: ["card","input"],
+      files: ["registry/new-york/block/apps-list-01.tsx"],
+      component: React.lazy(() => import("@/registry/new-york/block/apps-list-01.tsx")),
+      source: "__registry__/new-york/block/apps-list-01.tsx",
       category: "Authentication",
       subcategory: "Login",
       chunks: []
@@ -83,6 +116,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "input": {
+      name: "input",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/input.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/input.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "card": {
+      name: "card",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: ["registry/default/ui/card.tsx"],
+      component: React.lazy(() => import("@/registry/default/ui/card.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       type: "registry:example",
@@ -112,6 +167,17 @@ export const Index: Record<string, any> = {
       files: ["registry/default/block/authentication-01.tsx"],
       component: React.lazy(() => import("@/registry/default/block/authentication-01.tsx")),
       source: "__registry__/default/block/authentication-01.tsx",
+      category: "Authentication",
+      subcategory: "Login",
+      chunks: []
+    },
+    "apps-list-01": {
+      name: "apps-list-01",
+      type: "registry:block",
+      registryDependencies: ["card","input"],
+      files: ["registry/default/block/apps-list-01.tsx"],
+      component: React.lazy(() => import("@/registry/default/block/apps-list-01.tsx")),
+      source: "__registry__/default/block/apps-list-01.tsx",
       category: "Authentication",
       subcategory: "Login",
       chunks: []
