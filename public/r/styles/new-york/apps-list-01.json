@@ -5,8 +5,8 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "card",
-    "input"
+    "https://raw.githubusercontent.com/krish221997/apps-list/refs/heads/main/public/r/styles/new-york/card.json",
+    "https://raw.githubusercontent.com/krish221997/apps-list/refs/heads/main/public/r/styles/new-york/input.json"
   ],
   "files": [
     {
