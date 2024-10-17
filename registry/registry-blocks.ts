@@ -31,7 +31,7 @@ export const blocks: Registry = [
     name: "apps-list-01",
     type: "registry:block",
     registryDependencies: ["card", "input"],
-    dependencies: ["lucide-react"],
+    dependencies: ["lucide-react", "@integrationos/authkit"],
     files: ["block/apps-list-01.tsx"],
     category: "Authentication",
     subcategory: "Login",
