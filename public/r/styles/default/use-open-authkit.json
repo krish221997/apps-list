@@ -1,0 +1,11 @@
+{
+  "name": "use-open-authkit",
+  "type": "registry:hook",
+  "files": [
+    {
+      "path": "hooks/use-open-authkit.ts",
+      "content": "\"use client\";\n\n\nimport { useAuthKit } from \"@integrationos/authkit\";\nimport { useEffect, useState } from \"react\";\n\nexport const useOpenAuthKit = () => {\n    const [title, setTitle] = useState<string | null>(null);\n  \n    const { open } = useAuthKit({\n      selectedConnection: title || \"\",\n      token: {\n        url: process.env.NEXT_PUBLIC_URL as string,\n      },\n    });\n  \n    useEffect(() => {\n      if (title) {\n        open();\n      }\n    }, [title, open]);\n  \n    const trigger = (title: string) => {\n      if (!title) {\n        throw new Error(\"Title is required to trigger the AuthKit modal\");\n      }\n      setTitle(title);\n    };\n  \n    return {\n      trigger,\n    };\n  };",
+      "type": "registry:hook"
+    }
+  ]
+}

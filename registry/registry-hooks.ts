@@ -11,4 +11,14 @@ export const hooks: Registry = [
       },
     ],
   },
+  {
+    name: "use-open-authkit",
+    type: "registry:hook",
+    files: [
+      {
+        path: "hooks/use-open-authkit.ts",
+        type: "registry:hook",
+      },
+    ],
+  },
 ];

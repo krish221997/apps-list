@@ -4,35 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Loader2, Search, AlertCircle } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useAuthKit } from "@integrationos/authkit";
-
-const useOpenAuthKit = () => {
-  const [title, setTitle] = useState<string | null>(null);
-
-  const { open } = useAuthKit({
-    selectedConnection: title || "",
-    token: {
-      url: process.env.NEXT_PUBLIC_URL as string,
-    },
-  });
-
-  useEffect(() => {
-    if (title) {
-      open();
-    }
-  }, [title, open]);
-
-  const trigger = (title: string) => {
-    if (!title) {
-      throw new Error("Title is required to trigger the AuthKit modal");
-    }
-    setTitle(title);
-  };
-
-  return {
-    trigger,
-  };
-};
+import { useOpenAuthKit } from "@/hooks/use-open-authkit"
 
 export default function AppsList() {
   const [apps, setApps] = useState<{ name: string; icon: string }[]>([]);

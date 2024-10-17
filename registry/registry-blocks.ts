@@ -32,7 +32,12 @@ export const blocks: Registry = [
     type: "registry:block",
     registryDependencies: ["card", "input"],
     dependencies: ["lucide-react", "@integrationos/authkit"],
-    files: ["block/apps-list-01.tsx"],
+    files: ["block/apps-list-01.tsx",
+      {
+        path: "hooks/use-open-authkit.ts",
+        type: "registry:hook",
+      }
+    ],
     category: "Authentication",
     subcategory: "Login",
   },
